@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Personal website and blog created"
+title: "Neil He site launched"
 date: 2016-12-12
 ---
 
