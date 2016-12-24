@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>{{ page.title }}</title>
-		<!-- Link to main stylesheet (CSS)-->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/resume">Resume</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-			{{ content }}
-		</div><!-- /container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:nqh@gmail.com">email</a></li>
-        		<li><a href="https://github.com/neilqhe" target="_blank">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/neilhe" target="_blank">LinkedIn</a></li>
-			</ul>
-		</footer>
-	</body>
+  {% include head.html %}
+  <body>
+    <div class="page-content">
+      <div class="container">
+        <div class="three columns">
+          {% include header.html %}
+        </div>
+
+        <div class="nine columns" style="z-index:100;">
+          <div class="wrapper">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+      {% include footer.html %} 
+    </div>
+  </body>
 </html>
