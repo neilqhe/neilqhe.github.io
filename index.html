@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home - Neil He
+title: Home
 ---
 
 <div class="home">
@@ -25,20 +25,29 @@ title: Home - Neil He
       </div>
       <footer class="post_meta">
 
-        
+
+        {% if post.location %}
+        <span class="author-location">
+          <div data-icon="ei-location"></div>
+          <a href="https://www.google.com/maps/place/{{post.location}}">{{ post.location }}</a>
+        </span>
+        {% endif %}
+        <!--
         {% for category in post.categories %}
-        <a href="{{'/category/' | append: category | prepend: site.baseurl }}">
+        <a href="{{"/category/" | append: category | prepend: site.baseurl }}">
           <data data-icon="ei-archive"></data>
           {{category}}</a>
         {% endfor %}
-        
+        -->
 
+        <!--
         {% if post.author %}
         <span class="author_meta">
           <img src="{{site.baseurl}}/assets/img/{{post.author}}.jpg"></img>
-          <span>Neil He</span>
+          <span>David Lin</span>
         </span>
         {% endif %}
+        -->
 
         <!--p class="readmore">
           <a href=""><data data-icon="ei-arrow-right"></data>Read this article  </a>
